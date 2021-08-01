@@ -120,7 +120,7 @@ export default function Border7() {
   return (
     <Box>
       <PlayArea card={card} />
-      <Box /* className={classes.messageArea} */>
+      <Box className={classes.messageArea} >
         {getMessage()}
         {getButtons()}
       </Box>
