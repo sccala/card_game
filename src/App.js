@@ -11,7 +11,7 @@ export default function App() {
       <Typography variant="h2">
         <Box className={'h2-header'}>on Codesandbox</Box>
       </Typography>
-      <Box id="table">{/* Border7 コンポーネントをインポートしてセットする */}</Box>
+      <Box id="table"><Border7 /></Box>
     </Box>
   )
 }

@@ -44,12 +44,19 @@ const useCardStyles = makeStyles({
  * @param {*} props
  */
 export default function Card(props) {
+  const classes = useCardStyles()
+  const topAndBottom = props.card === null ? '?' : props.card.suit + props.card.rank
+  const middle = props.card === null ? '?' : props.card.suit
   return (
-    <MuiCard /* className={classes.root} */>
-      <Box /* className={classes.content} */ display="flex" flexDirection="column">
-        <Box /* className={classes.top} */ alignSelf="flex-start">{/* topAndBottom */}</Box>
-        <Box /* className={classes.middle} */>{/* middle */}</Box>
-        <Box /* className={classes.bottom} */ alignSelf="flex-end">{/* topAndBottom */}</Box>
+    <MuiCard className={classes.root}>
+      <Box className={classes.content} display="flex" flexDirection="column">
+        <Box className={classes.top} alignSelf="flex-start">
+          {topAndBottom}
+        </Box>
+        <Box className={classes.middle}>{middle}</Box>
+        <Box className={classes.bottom} alignSelf="flex-end">
+          {topAndBottom}
+        </Box>
       </Box>
     </MuiCard>
   )
